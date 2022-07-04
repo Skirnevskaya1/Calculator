@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".model.ui.MainActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_activity_main"
@@ -25,6 +25,18 @@
         android:layout_gravity="center"
         android:columnCount="3"
         android:useDefaultMargins="true">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal"
+            android:gravity="end"
+            android:paddingVertical="@dimen/default_padding"
+            android:text="100"
+            android:textColor="@color/white"
+            android:textSize="@dimen/result_size" />
 
         <Button
             android:id="@+id/button_ac"
