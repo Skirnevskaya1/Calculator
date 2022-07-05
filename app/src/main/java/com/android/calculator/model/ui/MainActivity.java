@@ -2,7 +2,6 @@ package com.android.calculator.model.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Path;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -57,10 +56,10 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
         findViewById(R.id.button_9).setOnClickListener(mapClickListener);
 
         Map<Integer, Operator> operatorsMap = new HashMap<>();
-        operatorsMap.put(R.id.button_div, Operator.DIV);
         operatorsMap.put(R.id.button_plus, Operator.ADD);
-        operatorsMap.put(R.id.button_multi, Operator.MULTI);
         operatorsMap.put(R.id.button_minus, Operator.SUB);
+        operatorsMap.put(R.id.button_multi, Operator.MULTI);
+        operatorsMap.put(R.id.button_div, Operator.DIV);
 
         View.OnClickListener operatorsMapClickListener = new View.OnClickListener() {
             @Override
@@ -69,10 +68,10 @@ public class MainActivity extends AppCompatActivity implements CalculatorView {
             }
         };
 
-        findViewById(R.id.button_div).setOnClickListener(operatorsMapClickListener);
         findViewById(R.id.button_plus).setOnClickListener(operatorsMapClickListener);
-        findViewById(R.id.button_multi).setOnClickListener(operatorsMapClickListener);
         findViewById(R.id.button_minus).setOnClickListener(operatorsMapClickListener);
+        findViewById(R.id.button_multi).setOnClickListener(operatorsMapClickListener);
+        findViewById(R.id.button_div).setOnClickListener(operatorsMapClickListener);
 
         findViewById(R.id.button_point).setOnClickListener(new View.OnClickListener() {
             @Override
