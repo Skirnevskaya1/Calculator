@@ -17,7 +17,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/result_view"
+            android:id="@+id/expression_view"
             style="@style/Theme.Calculator.ResultView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:textSize="@dimen/result_size" />
 
         <TextView
-            android:id="@+id/result"
+            android:id="@+id/result_view"
             style="@style/Theme.Calculator.ResultView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
