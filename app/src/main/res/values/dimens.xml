@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="result_size">24sp</dimen>
+    <dimen name="result1_size">42sp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="btn_calc_text_size">24sp</dimen>
+    <dimen name="small_padding">4dp</dimen>
+    <dimen name="button_size">65dp</dimen>
+    <dimen name="button_layout_margin">4dp</dimen>
+    <dimen name="button_layout_weight">16</dimen>
+</resources>
