@@ -8,15 +8,15 @@ import com.android.calculator.viewmodel.CalculatorViewModel
 import com.android.calculator.views.KeyboardKey
 import com.android.calculator.views.KeyboardView
 
-// Домашка
+// Домашка. циклы,
 //Функциональный тип, функция высшего порядка, паттерн listener
-// ЖЦ активити знать
-// смена конфигурации
-// про inner / nested классы
-// про sealed классы
-// про typealias
-// ввод клавиш должен отображаться в expression_view
-//CE удаляет только последнее введённое число
+// ЖЦ активити знать.
+// смена конфигурации.
+// про inner / nested классы.
+// про sealed классы.
+// про typealias.
+// ввод клавиш должен отображаться в expression_view.
+//CE удаляет только последнее введённое число.
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,25 +24,26 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val resultView = findViewById<TextView>(R.id.result_view)
         val expressionView = findViewById<TextView>(R.id.expression_view)
-        val expression = expressionView.text.toString()
+        val resultView = findViewById<TextView>(R.id.result_view)
 
         // rv написать
-        // найти ошибку в функции
         //2-3 задачи на leetcode
         fun deleteSymbol() {
-            if (expression.isNotEmpty()) {
-                expressionView.text == expression.drop(1)
-            } else {
-                resultView.text = ""
-            }
+            if (expressionView.text.toString().isNotEmpty())
+                expressionView.text = expressionView.text.toString().dropLast(1)
+//                expressionView.text = expressionView.text.toString()
+//                    .substring(0, expressionView.text.toString().length - 1)
+            resultView.text = ""
         }
 
         findViewById<KeyboardView>(R.id.keyboard).setOnKeyPressedListener { key ->
 
             when (key) {
-                KeyboardKey.BUTTON_CE -> deleteSymbol()
+                KeyboardKey.BUTTON_CE -> {
+                    deleteSymbol()
+                }
+
                 KeyboardKey.BUTTON_MC -> {
                     expressionView.text = ""
                     resultView.text = ""
@@ -72,7 +73,6 @@ class MainActivity : AppCompatActivity() {
                     expressionView.text.toString() + "="
             }
         }
-
     }
 
 }
