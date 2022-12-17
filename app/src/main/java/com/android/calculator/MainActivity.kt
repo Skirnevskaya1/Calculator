@@ -20,6 +20,8 @@ import com.android.calculator.views.KeyboardView
 
 class MainActivity : AppCompatActivity() {
 
+    private val viewModel = CalculatorViewModel()
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val resultView = findViewById<TextView>(R.id.result_view)
 
         // rv написать
-        //2-3 задачи на leetcode
+        // 2-3 задачи на leetcode
         fun deleteSymbol() {
             if (expressionView.text.toString().isNotEmpty())
                 expressionView.text = expressionView.text.toString().dropLast(1)
@@ -38,8 +40,16 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<KeyboardView>(R.id.keyboard).setOnKeyPressedListener { key ->
+            viewModel.onKeyPressed(key)
 
-            when (key) {
+        }
+    }
+
+}
+
+/*
+InstrumentChartWidge
+ when (key) {
                 KeyboardKey.BUTTON_CE -> {
                     deleteSymbol()
                 }
@@ -73,7 +83,4 @@ class MainActivity : AppCompatActivity() {
                     expressionView.text.toString() + "="
             }
         }
-    }
-
-}
-
+* */
